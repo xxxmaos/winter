@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: fixed;
+            top: 200px;
+            left: 200px;
+            margin: auto;
+
+            background-color: white;
+            overflow: hidden;
+            width: 600px;
+            height: 300px;
+        }
+
+        .first {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            animation: mymove 4s infinite;
+
+        }
+
+        .second {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            position: absolute;
+            top: 0px;
+            left: 300px;
+            animation: mymove 4s infinite;
+            float: right;
+        }
+
+        @keyframes mymove {
+
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                left: 400px;
+                top: 0px;
+            }
+
+            75% {
+                left: 600px;
+                top: px;
+            }
+
+            100% {
+                left: 800px;
+                top: 0px;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="first"></div>
+        <div class="second"></div>
+    </div>
+</body>
+
+</html>
