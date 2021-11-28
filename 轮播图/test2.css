@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    position: relative;
+   left: 50%;
+   top:0;}
+
+ /* .container{
+   background-color: #333;
+   perspective: 1000px;
+   position: relative;
+   width: 380px;
+   height: 250px;
+} */
+
+ul.slides{
+    display: flex;
+    list-style:none;
+    width: 280px;
+    overflow: hidden;
+    /* position:absolute; */
+    /* background-color: yellow;
+    transform:rotateY(0) translateZ(-700px); */
+
+}
+
+li.slide{
+    transition: .5s transform ease-in-out;
+    /* margin: 3px; */
+}
+
+ img {
+    width: 280px
+}
+
+input[type="radio"] {
+    position: relative;
+    z-index: 100;
+    display:none;
+}
+
+.choose_visible{
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+    text-align: center;
+}
+
+.choose_visible label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color:#fff;
+    border-radius: 50%;
+    margin:  3px;
+    border: 2px solid #fff;
+    position: relative;
+    left:0;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.choose_visible label:nth-of-type(1) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.choose_visible label:nth-of-type(2) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.choose_visible label:nth-of-type(3) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(4):checked~.choose_visible label:nth-of-type(4) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.slide{
+    transform: translateX(0%);
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.slide{
+    transform: translateX(-280px);
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.slide{
+    transform: translateX(-560px);
+}
+
+.slides input[type="radio"]:nth-of-type(4):checked~.slide{
+    transform: translateX(-840px);
+} 
+
+/* .slides:nth-child(1){
+    transform: translateY(0) translateZ(700px);
+} */
+
+/* .slides:nth-child(2){
+    transform: translateY(120deg) translateZ(700px);
+}
+
+.slides:nth-child(3){
+    transform: translateY(240deg) translateZ(700px);
+}
+
+.slides:nth-child(4){
+    transform: translateY(360deg) translateZ(700px);
+} */

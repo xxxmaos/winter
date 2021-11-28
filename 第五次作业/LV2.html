@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LV2</title>
+    <script>
+        window.onload = function () {
+            let checkAll = document.getElementById("checkAll");
+            checkAll.onclick = function () {
+                let hobby = document.getElementsByName("hobby");
+                for (let i = 0; i < hobby.length; i++) {
+                    hobby[i].checked = true;
+                }
+            }
+
+            let checkNone = document.getElementById("checkNone");
+            checkNone.onclick = function () {
+                let hobby = document.getElementsByName("hobby");
+                for (let i = 0; i < hobby.length; i++) {
+                    hobby[i].checked = false;
+                }
+            }
+
+            let checkReverse = document.getElementById("checkReverse");
+            checkReverse.onclick = function () {
+                let hobby = document.getElementsByName("hobby");
+                for (let i = 0; i < hobby.length; i++) {
+                    hobby[i].checked = !hobby[i].checked;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div align="center">
+        <b>请选择您的爱好</b>
+        <br />
+    </div>
+
+    <div id="divlist" align="center">
+        <input type="checkbox" value="内卷" name="hobby">内卷
+        <input type="checkbox" value="疯狂内卷" name="hobby">疯狂内卷
+        <input type="checkbox" value="拼命内卷" name="hobby">拼命内卷
+        <input type="checkbox" value="使劲内卷" name="hobby">使劲内卷
+        <br />
+        <input type="button" value="全选" id="checkAll">
+        <input type="button" value="全不选" id="checkNone">
+        <input type="button" value="反选" id="checkReverse">
+    </div>
+
+</body>
+
+</html>
