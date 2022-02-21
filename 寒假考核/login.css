@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*顶部*/
+.nav-container{
+    width: 1040px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 22px 0 20px;
+}
+
+.nav{
+    background: #edf4ed;
+}
+
+.nav-container img{
+    width: 142px;
+}
+
+/*左边部分*/
+.login-wrapper{
+    width: 1002px;
+    margin: 124px auto 0;
+    position: relative;
+}
+
+.login-left img{
+    height: 584px;
+    width: 494px;
+}
+
+.login-left{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin-left: -432px;
+    vertical-align: top;
+    top: -40px;
+}
+
+.left-bottom img{
+    height: 37px;
+    width: 131px;
+}
+
+.left-bottom{
+    text-align: center;
+    position: relative;
+}
+
+.app-qr img{
+    width: 37px;
+    height: 37px;
+}
+
+.app-qr{
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+}
+
+.app-qr p{
+    position: absolute;
+    top: 0;
+    font-size: 13px;
+    color: #666;
+    background: #fff;
+    line-height: 13px;
+    white-space: nowrap;
+    display: none;
+}
+
+.app-qr a:hover>.ios{
+    display: block;
+}
+
+/*右边*/
+.login-right{
+    display: inline-block;
+    border: 1px solid #d8d8d8;
+    width: 340px;
+    position: relative;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -46px;
+    vertical-align: top;
+    padding: 50px 30px 100px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    width: 340px;
+    overflow: hidden;
+}
+
+.login-right-hd{
+    margin-bottom: 10px;
+    color: #9b9b9b;
+    font-size: 0;
+    width: 280px;
+    padding-right: 0;
+}
+
+.login-right-hd ul{
+    border-bottom: 1px solid #ececec;
+    list-style: none;
+    width: 280px;
+}
+
+.login-right-hd ul li{
+    display: inline-block;
+    width: 50%;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login-right-bd{
+    width: 280px;
+}
+
+.login-right-hd ul li:focus{
+    border-bottom: 2px solid #494949;
+    color: #333;
+    font-weight: 600;
+}
+
+/*登录注册*/
+.login-right-form{
+    display: block;
+}
+
+.form-tips{
+    color: #9b9b9b;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.form-tips a{
+    color: #41ac52;
+    text-decoration: none;
+}
+
+.form-raw div{
+    width: 50px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    padding-right: 1px;
+    line-height: 40px;
+    border-right: 1px solid #9b9b9b;
+}
+
+.form-raw{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+.form-raw input{
+    padding-left: 60px;
+    padding-right: 40px;
+    height: 37px;
+    outline: none;
+    box-shadow: none;
+    line-height: 40px;
+}
+
+.form-raw a{
+    position: absolute;
+    padding: 0 10px;
+    right: 0;
+    top: 0;
+    line-height: 42px;
+    text-decoration: none;
+    color: #41ac52;
+    width: 70px;
+    font-size: 12px;
+}
+
+.form-button{
+    position: relative;
+    width: 280px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 3px;
+    height: 36px;
+    background-color: #41ac52;
+}
+
+.form-button a{
+    padding: 0;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.form-footer p{
+    margin: 10px 0;
+    float: right;
+    cursor: pointer;
+    color: #41ac52;
+    font-size: 12px;
+}
+
+.form-footer{
+    width: 280px;
+    height: 41px;
+}
+
+/*密码登录*/
+.password-login{
+    display: none;
+}
+
+.pass-raw{
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+.pass-raw input{
+    height: 35px;
+    width: 280px;
+}
+
+.pass-raw a{
+    text-decoration: none;
+    position: absolute;
+    padding: 0 10px;
+    right: 0;
+    top: 0;
+    color: #9b9b9b;
+    line-height: 42px;
+}
+
+.pass-overseas{
+    margin: 10px 0;
+    float: right;
+}
+
+.pass-overseas a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #41ac52;
+}
+
+/*第三方登录*/
+.form-3{
+    width: 280px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.form-3-hd{
+    color: #9b9b9b;
+    font-size: 11px;
+    text-align: center;
+}
+
+.form-3-hd:before,.form-3-hd:after{
+    background: #ddd;
+    margin-top: 9px;
+    width: 36%;
+    height: 1px;
+    float: left;
+    content: "";
+}
+
+.form-3-hd:after{
+    float: right;
+}
+
+.form-3-bd{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.form-3-bd img{
+    height: 50px;
+}
+
+.active{
+    border-bottom: 2px solid #494949;
+    color: #333;
+    font-weight: 600;
+}

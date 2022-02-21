@@ -17,18 +17,21 @@ let obj3 = { personInfo: "name,age" };
 function deepCopy(obj) {
     //your code
     function deepCopy(obj) {
-        const newObj = {};
-        for (let i in obj) {
-
-            if (typeof obj[i] === "object") {
-
-                newObj[i] = deepCopy(obj[key]);
+        if (obj instanceof Array) {
+            let n = [];
+            for (let i = 0; i < obj.length; i++) {
+                n[i] = deepCopy(obj[i])
             }
-            else {
-                newObj[i] = obj[i];
+            return n;
+        } else if (obj instanceof Object) {
+            let n = {};
+            for (let i in obj) {
+                n[i] = deepCopy(obj[i])
             }
+            return n;
+        } else {
+            return obj
         }
-        return newObj;
     }
 }
 

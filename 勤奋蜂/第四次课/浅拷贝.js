@@ -23,5 +23,4 @@ function copy(obj) {
     return returnObj;
     console.log(returnObj);
 }
-
-const copyObj1 = copy(obj)
+copy(obj)
