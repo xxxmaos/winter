@@ -216,7 +216,7 @@
 
 /*密码登录*/
 .password-login{
-    display: none;
+    display: block;
 }
 
 .pass-raw{

@@ -12,8 +12,6 @@
 </head>
 
 <body>
-    <script src="lunBo.js"></script>
-
     <div class="top-bar-nav">
         <ul class="top-bar-nav-left">
             <li>
@@ -49,10 +47,10 @@
         </ul>
         <ul class="top-bar-nav-right">
             <li>
-                <a href="#">登录</a><span>|</span>
+                <a href="mi-login.html">登录</a><span>|</span>
             </li>
             <li>
-                <a href="#">注册</a>
+                <a href="mi-register.html">注册</a>
             </li>
             <li class="shopping">
                 <span style="display: inline-block;width: 20px;">1</span>
@@ -150,10 +148,8 @@
                 </div>
             </div>
             <div class="search">
-                <form>
-                    <input type="text" class="search-input" />
-                    <button>&</button>
-                </form>
+                <input type="text" class="search-input" />
+                <button>&</button>
                 <ul class="hot-words">
                     <li>
                         <a href="#">小米手机5</a>
@@ -334,25 +330,25 @@
         <div class="slide-main">
             <div class="slides">
                 <ul>
-                    <li class="slide active"><img src="img/xmad-1.jpg"></li>
-                    <li class="slide"><img src="img/xmad-2.jpg"></li>
-                    <li class="slide"><img src="img/xmad-3.jpg"></li>
-                    <li class="slide"><img src="img/xmad-4.jpg"></li>
-                    <li class="slide"><img src="img/xmad-5.jpg"></li>
+                    <li class="slide"><img src="img/xmad-1.jpg"></li>
+                    <li><img src="img/xmad-2.jpg"></li>
+                    <li><img src="img/xmad-3.jpg"></li>
+                    <li><img src="img/xmad-4.jpg"></li>
+                    <li><img src="img/xmad-5.jpg"></li>
                 </ul>
             </div>
             <div class="dots">
                 <ul id="dots">
-                    <li classname="dot active" data-index="0"></li>
-                    <li classname="dot" data-index="1"></li>
-                    <li classname="dot" data-index="2"></li>
-                    <li classname="dot" data-index="3"></li>
-                    <li classname="dot" data-index="4"></li>
+                    <li class="dot" data-index="0"></li>
+                    <li data-index="1"></li>
+                    <li data-index="2"></li>
+                    <li data-index="3"></li>
+                    <li data-index="4"></li>
                 </ul>
             </div>
             <div class="left-right">
-                <div class="left">&lt</div>
-                <div class="right">&gt</div>
+                <a href="#" class="left">&lt</a>
+                <a href="#" class="right">&gt</a>
             </div>
         </div>
 
@@ -406,6 +402,8 @@
             </div>
         </div>
     </div>
+
+
 
     <div class="main-page">
         <div class="sroll">
@@ -857,5 +855,6 @@
         </div>
     </div>
 </body>
+<script src="lunBo.js"></script>
 
 </html>

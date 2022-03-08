@@ -78,7 +78,7 @@ let balls = document.querySelectorAll('.ball');
 //     ballMove(balls[2], 100)
 // })
 
-//await 
+//await
 let ballMove = function (time) {
     return new Promise((resolve) => {
         setTimeout(() => {

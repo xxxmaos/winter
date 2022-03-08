@@ -1,59 +1,61 @@
-let slides = document.querySelectorAll('.slide');
-let dots = document.querySelectorAll('.dot')
+let slides = document.querySelectorAll('.slides ul li');
+console.log(slides);
+let dots = document.querySelectorAll('.dots ul li')
+let box = document.querySelector('.slides')
 let leftBtn = document.querySelector('.left');
 let rightBtn = document.querySelector('.right');
 
-let index = 0;
-let time = 0;
+let num = 0;
 
-let goIndex = function () {
+function clear() {
     for (let i = 0; i < slides.length; i++) {
-        slides[index].className = 'slide';
+        slides[i].removeAttribute('class');
+        // console.log(dots[i]);
+        dots[i].removeAttribute('class');
     }
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = 'dot';
-    }
-    slides[index].className = 'slide active';
-    dots[index].className = 'dot active';
 }
 
-let next = function () {
-    if (index < slides.length) {
-        index++;
+function run() {
+    clear();
+    num++;
+    if (num >= slides.length) {
+        num = 0;
+    }
+    //设置指定图片显示
+    slides[num].classList.add('slide')
+    dots[num].setAttribute('class', 'dot');
+}
+
+let time = setInterval(run, 3000);
+
+box.onmouseover = function () {
+    clearInterval(time);
+}
+
+box.onmouseout = function () {
+    time = setInterval(run, 3000);
+}
+
+rightBtn.onclick = function () {
+    clear();
+    if (num == 4) {
+        num = 0;
+        slides[num].setAttribute('class', 'slide');
     } else {
-        index = 0;
+        num++;
+        slides[num].setAttribute('class', 'slide');
+        dots[num].setAttribute('class', 'dot');
     }
-    goIndex();
 }
 
-let prev = function () {
-    if (index == 0) {
-        index = slides.length;
+leftBtn.onclick = function () {
+    clear();
+    if (num == 4) {
+        num = 0;
+        slides[num].setAttribute('class', 'slide');
     } else {
-        index--;
+        num++;
+        slides[num].setAttribute('class', 'slide');
+        dots[num].setAttribute('class', 'dot');
     }
-    goIndex();
 }
-
-setInterval(function () {
-    time++;
-    if (time == 20) {
-        next();
-        time = 0;
-    }
-}, 100)
-
-leftBtn.addEventListener('click', function () {
-    prev();
-})
-rightBtn.addEventListener('click', function () {
-    next();
-})
-
-for (let i = 0; i < dots.length; i++) {
-    let pointIndex = this.getAttribute("data-index");
-    index = pointIndex;
-    goIndex();
-    time = 0;
-}
-
